@@ -28,34 +28,37 @@
 	<string>LaunchScreen</string>
 	<key>UIMainStoryboardFile</key>
 	<string>Main</string>
+
 	<key>UISupportedInterfaceOrientations</key>
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+
 	<key>UISupportedInterfaceOrientations~ipad</key>
-
-	<key>NSBluetoothAlwaysUsageDescription</key>
-    <string>هذا التطبيق يحتاج إلى استخدام البلوتوث للاتصال بالأجهزة الذكية.</string>
-
-    <key>NSBluetoothPeripheralUsageDescription</key>
-    <string>التطبيق يحتاج إلى الوصول إلى البلوتوث للاتصال بالأجهزة.</string>
-
-    <key>NSLocationWhenInUseUsageDescription</key>
-    <string>هذا التطبيق يحتاج إلى الوصول إلى الموقع لاكتشاف الأجهزة القريبة.</string>
-
-    <key>NSLocationAlwaysUsageDescription</key>
-    <string>يتم استخدام الموقع في الخلفية للاتصال بالأجهزة القريبة عبر البلوتوث.</string>
-
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>
 		<string>UIInterfaceOrientationPortraitUpsideDown</string>
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+
+	<key>NSBluetoothAlwaysUsageDescription</key>
+	<string>هذا التطبيق يحتاج إلى استخدام البلوتوث للاتصال بالأجهزة الذكية.</string>
+
+	<key>NSBluetoothPeripheralUsageDescription</key>
+	<string>التطبيق يحتاج إلى الوصول إلى البلوتوث للاتصال بالأجهزة.</string>
+
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>هذا التطبيق يحتاج إلى الوصول إلى الموقع لاكتشاف الأجهزة القريبة.</string>
+
+	<key>NSLocationAlwaysUsageDescription</key>
+	<string>يتم استخدام الموقع في الخلفية للاتصال بالأجهزة القريبة عبر البلوتوث.</string>
+
 	<key>CADisableMinimumFrameDurationOnPhone</key>
 	<true/>
+
 	<key>UIApplicationSupportsIndirectInputEvents</key>
 	<true/>
 </dict>
