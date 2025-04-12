@@ -6,11 +6,18 @@ workflows:
       flutter: stable
       xcode: latest
     scripts:
+      # Install CocoaPods and update repos
       - name: Install CocoaPods (if needed)
         script: |
           sudo gem install cocoapods
           pod repo update
 
+      # Run flutter doctor to verify environment
+      - name: Flutter Doctor
+        script: |
+          flutter doctor
+
+      # Clean and fetch packages
       - name: Clean & Get Packages
         script: |
           flutter clean
@@ -18,16 +25,12 @@ workflows:
           cd ios && pod install --repo-update
           cd ..
 
-      - name: Install Xcode dependencies
-        script: |
-          sudo gem install cocoapods
-          pod install --repo-update
-          flutter doctor
-
+      # Precache iOS artifacts for flutter
       - name: Precache Flutter iOS artifacts
         script: |
           flutter precache --ios
 
+      # Build iOS release without codesigning
       - name: Build iOS release
         script: |
           flutter build ios --release --no-codesign
