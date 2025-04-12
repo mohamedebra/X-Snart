@@ -17,7 +17,8 @@ def flutter_root
   raise "FLUTTER_ROOT not found in #{generated_xcode_build_settings_path}. Run `flutter build ios` first."
 end
 
-# require File.expand_path(File.join(flutter_root, 'packages', 'flutter_tools', 'bin', 'podhelper'))
+# 👇 هذا السطر كان هو السبب الرئيسي في الخطأ
+require File.expand_path(File.join(flutter_root, 'packages', 'flutter_tools', 'bin', 'podhelper'))
 
 target 'Runner' do
   use_frameworks!
