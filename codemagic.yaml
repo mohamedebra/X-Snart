@@ -1,0 +1,25 @@
+workflows:
+  ios-release-build:
+    name: iOS Release Build
+    max_build_duration: 45
+    environment:
+      flutter: stable
+      xcode: latest
+    scripts:
+      - name: Clean & Get Packages
+        script: |
+          flutter clean
+          flutter pub get
+
+      - name: Precache Flutter iOS artifacts
+        script: |
+          flutter precache --ios
+
+      - name: Build iOS release
+        script: |
+          flutter build ios --release --no-codesign
+
+    artifacts:
+      - build/ios/iphoneos/Runner.app
+      - build/ios/ipa
+      - build/**/outputs/**/*.apk
