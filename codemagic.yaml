@@ -1,0 +1,15 @@
+workflows:
+  ios:
+    name: ios release
+    max_build_duration: 60
+    build:
+      scripts:
+        - flutter clean
+        - flutter pub get
+        - flutter build ios --release --no-codesign
+    testing:
+      scripts:
+        - flutter test
+    publishing:
+      scripts:
+        - flutter build ios --release --no-codesign
