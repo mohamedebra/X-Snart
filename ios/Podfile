@@ -1,5 +1,5 @@
 # استخدام iOS 13.0 كحد أدنى
-platform :ios, '12.0'
+platform :ios, '13.0'
 
 # تعطيل إحصائيات CocoaPods
 ENV['COCOAPODS_DISABLE_STATS'] = 'true'
