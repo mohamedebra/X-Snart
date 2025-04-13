@@ -190,6 +190,12 @@ class _CodePickerWidgetState extends State<CodePickerWidget> {
                 hideSearch: widget.hideSearch!,
                 closeIcon: widget.closeIcon,
                 flagDecoration: widget.flagDecoration,
+
+                // إضافة المعاملات المفقودة
+                hideHeaderText:  false,  // أو استخدم القيمة المناسبة من widget
+                headerAlignment: MainAxisAlignment.center,  // أو استخدم التوسيم الذي تحتاجه
+                headerTextStyle: TextStyle(),  // أو استخدم الأنماط التي تحتاجها
+                topBarPadding: EdgeInsets.all(10),  // أو استخدم الحشو الذي تريده
               ),
             ),
           ),
@@ -220,12 +226,18 @@ class _CodePickerWidgetState extends State<CodePickerWidget> {
             boxDecoration: widget.boxDecoration,
             showFlag: widget.showFlagDialog ?? widget.showFlag,
             flagWidth: widget.flagWidth!,
-            flagDecoration: widget.flagDecoration,
             size: widget.dialogSize,
             backgroundColor: widget.dialogBackgroundColor,
             barrierColor: widget.barrierColor,
             hideSearch: widget.hideSearch!,
             closeIcon: widget.closeIcon,
+            flagDecoration: widget.flagDecoration,
+
+            // إضافة المعاملات المفقودة
+            hideHeaderText:  false,  // أو استخدم القيمة المناسبة من widget
+            headerAlignment: MainAxisAlignment.center,  // أو استخدم التوسيم الذي تحتاجه
+            headerTextStyle: TextStyle(),  // أو استخدم الأنماط التي تحتاجها
+            topBarPadding: EdgeInsets.all(10),  // أو استخدم الحشو الذي تريده
           ),
         ),
       ).then((e) {
