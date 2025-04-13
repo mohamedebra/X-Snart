@@ -3,8 +3,20 @@ workflows:
     name: ios release
     max_build_duration: 60
     environment:
-      flutter: stable
+      flutter: stable  # تأكد من استخدام النسخة المستقرة من Flutter
     scripts:
+      # تنظيف المشروع وتحميل الحزم
       - flutter clean
       - flutter pub get
+
+      # تحديث CocoaPods
+      - pod install --project-directory=ios
+
+      # بناء التطبيق على نظام iOS بدون توقيع الكود (no-codesign)
       - flutter build ios --release --no-codesign
+
+    # يمكنك إضافة فحوصات أو إجراءات إضافية حسب الحاجة هنا
+    artifacts:
+      - build/ios/iphoneos/Runner.app # أو حسب المسار الخاص بتطبيقك
+
+
