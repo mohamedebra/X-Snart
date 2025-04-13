@@ -4,7 +4,7 @@ platform :ios, '13.0'
 ENV['COCOAPODS_DISABLE_STATS'] = 'true'
 
 # Specify the project path for your application
-project 'ios/Runner.xcodeproj', {
+project 'Runner.xcodeproj', {
   'Debug' => :debug,
   'Profile' => :release,
   'Release' => :release,
