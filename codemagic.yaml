@@ -11,7 +11,7 @@ workflows:
         XCODE_SCHEME: "swiftly"
         BUNDLE_ID: "io.codemagic.cmswiftly"
         APP_STORE_APP_ID: 1570610860
-      xcode: 14.3
+      xcode: 16.2
       cocoapods: default
     triggering:
       events:
@@ -77,7 +77,7 @@ workflows:
         XCODE_WORKSPACE: "swiftly.xcworkspace" # <-- Put the name of your workspace here.
         XCODE_SCHEME: "swiftly" # <-- Put the name of your scheme here.
         APP_STORE_APP_ID: 1571469558
-      xcode: latest # <-- set to specific version e.g. 14.3, 15.0 to avoid unexpected updates.
+      xcode: latest # <-- set to specific version e.g. 16.2, 15.0 to avoid unexpected updates.
       cocoapods: default
     triggering:
       events:
@@ -121,7 +121,7 @@ workflows:
     publishing:
       email:
         recipients:
-          - user1@example.com
+          - mohamed.3wad20@gmail.com
         notify:
           success: true
           failure: true
@@ -153,7 +153,7 @@ workflows:
         XCODE_WORKSPACE: "swiftly.xcworkspace" # <-- Put the name of your workspace here.
         XCODE_SCHEME: "swiftly" # <-- Put the name of your scheme here.
         APP_STORE_APP_ID: 1570610860
-      xcode: latest # <-- set to specific version e.g. 14.3, 15.0 to avoid unexpected updates.
+      xcode: latest # <-- set to specific version e.g. 16.2, 15.0 to avoid unexpected updates.
       cocoapods: default
     triggering:
       events:
@@ -183,7 +183,7 @@ workflows:
     publishing:
       email:
         recipients:
-          - user1@example.com
+          - mohamed.3wad20@gmail.com
         notify:
           success: true
           failure: true
@@ -208,7 +208,7 @@ workflows:
         XCODE_SCHEME: "swiftly"
         BUNDLE_ID: "io.codemagic.cmswiftly"
         APP_STORE_APP_ID: 1570610860
-      xcode: 14.3
+      xcode: 16.2
       cocoapods: default
     triggering:
       events:
@@ -253,7 +253,7 @@ workflows:
       groups:
         - ios_creds # <-- (group contains variables: APP_STORE_CONNECT_ISSUER_ID, APP_STORE_CONNECT_KEY_IDENTIFIER, APP_STORE_CONNECT_PRIVATE_KEY, CERTIFICATE_PRIVATE_KEY)
         - fastlane_credentials # <-- (group contains variables: MATCH_SSH_KEY, MATCH_KEYCHAIN, MATCH_PASSWORD)
-      xcode: 14.3
+      xcode: 16.2
       cocoapods: default
     scripts:
       # - gem install bundler:2.2.27
@@ -273,7 +273,7 @@ workflows:
         BUNDLE_ID: "io.codemagic.cmflutteryaml"
         APP_STORE_APP_ID: 1571561263
       flutter: stable
-      xcode: 14.3
+      xcode: 16.2
       cocoapods: default
     scripts:
       - name: Set up keychain to be used for codesigning using Codemagic CLI 'keychain' command
@@ -349,7 +349,7 @@ workflows:
         BUNDLE_ID: io.codemagic.flutterflavors.dev
         ENTRY_POINT: lib/main_dev.dart
       flutter: stable
-      xcode: 14.3
+      xcode: 16.2
       cocoapods: default
     triggering:
       events:
@@ -420,7 +420,7 @@ workflows:
         BUNDLE_ID: io.codemagic.flutterflavors.prod
         ENTRY_POINT: lib/main_prod.dart
       flutter: stable
-      xcode: 14.3
+      xcode: 16.2
       cocoapods: default
     triggering:
       events:
@@ -488,7 +488,7 @@ workflows:
         BUNDLE_ID: "io.codemagic.cmreactnative"
         APP_STORE_APP_ID: 1571903173
       node: 16.11.1
-      xcode: 14.3
+      xcode: 16.2
       cocoapods: default
     triggering:
       events:
