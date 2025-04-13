@@ -8,7 +8,8 @@ project 'Runner', {
   'Release' => :release,
 }
 
-require File.expand_path(File.join('..', 'Flutter', 'flutter_export_environment'))
+# ❌ حذف هذا السطر لأنه يسبب خطأ إذا لم يكن الملف موجودًا بعد
+# require File.expand_path(File.join('..', 'Flutter', 'flutter_export_environment'))
 
 def flutter_root
   generated_xcode_build_settings_path = File.expand_path(File.join('..', 'Flutter', 'Generated.xcconfig'), __FILE__)
