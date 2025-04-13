@@ -8,12 +8,12 @@ workflows:
       # تنظيف المشروع وتحميل الحزم
       - flutter clean
       - flutter pub get
-
+      - cd ios && pod install && cd ..
       # تحديث CocoaPods
       - pod install --project-directory=ios
 
       # بناء التطبيق على نظام iOS بدون توقيع الكود (no-codesign)
-      - flutter build ios --release --no-codesign
+      - flutter build ios --release --no-codesign -v
 
     # يمكنك إضافة فحوصات أو إجراءات إضافية حسب الحاجة هنا
     artifacts:
