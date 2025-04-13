@@ -1,16 +1,15 @@
 platform :ios, '13.0'
 
-# Disable CocoaPods stats to avoid unnecessary telemetry
 ENV['COCOAPODS_DISABLE_STATS'] = 'true'
 
-# Specify the project path for your application
-project 'Runner.xcodeproj', {
+project 'Runner', {
   'Debug' => :debug,
   'Profile' => :release,
   'Release' => :release,
 }
 
-# Function to find Flutter root path in Codemagic environment
+require File.expand_path(File.join('..', 'Flutter', 'flutter_export_environment'))
+
 def flutter_root
   generated_xcode_build_settings_path = File.expand_path(File.join('..', 'Flutter', 'Generated.xcconfig'), __FILE__)
   File.foreach(generated_xcode_build_settings_path) do |line|
@@ -20,12 +19,11 @@ def flutter_root
   raise "FLUTTER_ROOT not found in #{generated_xcode_build_settings_path}. Run `flutter build ios` first."
 end
 
-# Import Flutter's helper for installing iOS Pods
 require File.expand_path(File.join(flutter_root, 'packages', 'flutter_tools', 'bin', 'podhelper'))
 
-# Define the target for iOS build
 target 'Runner' do
   use_frameworks!
   use_modular_headers!
+
   flutter_install_all_ios_pods(File.dirname(__FILE__))
 end
